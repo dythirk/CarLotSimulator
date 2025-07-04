@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -6,6 +7,9 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            var carLotOne = new Carlot();
+
+
             //TODO
 
             //Create a seperate class file called Car
@@ -27,6 +31,8 @@ namespace CarLotSimulator
             carOne.MakeEngineNoise("Vroom");
             carOne.MakeHonkNoise("Honk");
 
+            carLotOne.ParkingLot.Add(carOne);
+
             var carTwo = new Car()
             {
                 Make = "Subaru",
@@ -36,6 +42,14 @@ namespace CarLotSimulator
             };
             carTwo.MakeEngineNoise("Brrrz");
             carTwo.MakeHonkNoise("Wonk");
+
+            carLotOne.ParkingLot.Add(carTwo);
+
+            var carThree = new Car("Honda", "NSX", 2023, true);
+            carThree.MakeEngineNoise("Ribbit");
+            carThree.MakeHonkNoise("Kablam");
+
+            carLotOne.ParkingLot.Add(carThree);
 
             //*************BONUS*************//
 
@@ -47,6 +61,8 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+            carLotOne.CheckCars();
         }
     }
 }
