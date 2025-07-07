@@ -9,7 +9,6 @@ namespace CarLotSimulator
         {
             var carLotOne = new Carlot();
 
-
             //TODO
 
             //Create a seperate class file called Car

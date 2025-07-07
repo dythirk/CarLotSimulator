@@ -8,8 +8,11 @@ namespace CarLotSimulator
 {
     public class Car
     {
-        public Car() { }
-
+        public Car()
+        {
+            Carlot._numberOfCars++;
+            Console.WriteLine($"Total cars in the lot: {Carlot._numberOfCars}");
+        }
         public string Make;
         public string Model;
         public int Year;
@@ -26,15 +29,14 @@ namespace CarLotSimulator
             HonkNoise = honkNoise;
             Console.WriteLine($"{Make} {Model} has a honk noise that sounds like {HonkNoise}.");
         }
-
-
-
         public Car(string make, string model, int year, bool isDriveable)
         {
             Make = make;
             Model = model;
             Year = year;
             IsDriveable = isDriveable;
+            Carlot._numberOfCars++;
+            Console.WriteLine($"Total cars in the lot: {Carlot._numberOfCars}");
 
         }
 
