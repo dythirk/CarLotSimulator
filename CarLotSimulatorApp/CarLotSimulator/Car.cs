@@ -13,9 +13,10 @@ namespace CarLotSimulator
             Carlot._numberOfCars++;
             Console.WriteLine($"Total cars in the lot: {Carlot._numberOfCars}");
         }
-        public string Make;
-        public string Model;
-        public int Year;
+
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
         public string EngineNoise { get; set; }
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
